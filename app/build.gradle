@@ -22,7 +22,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //Retrofit网络库。添加后okhttp和okio库也会自动下载下来。因为Retrofit依赖于okhttp而扩展。
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    //Retrofit要想使用gson解析工具解析返回的json数据，需添加如下联系库。添加后gson本体库也会下载下来。
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
 }
