@@ -1,8 +1,10 @@
 package com.liuchuanzheng.mvpretrofitrxjava_demo;
 
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
+import rx.Observable;
 
 /**
  * Retrofit所有请求接口的定义接口类。通过注解定义
@@ -14,4 +16,9 @@ public interface RetrofitService {
                              @Query("tag") String tag,
                              @Query("start") int start,
                              @Query("count") int count);
+    @GET("book/search")
+    Observable<Book> getSearchBook2(@Query("q") String name,
+                                    @Query("tag") String tag,
+                                    @Query("start") int start,
+                                    @Query("count") int count);
 }

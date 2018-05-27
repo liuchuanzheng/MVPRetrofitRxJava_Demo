@@ -13,9 +13,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="原生Retrofit请求" />
-
     <Button
         android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="结合rxjava" />
+
+    <Button
+        android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="mvp加rxjava模式" />
