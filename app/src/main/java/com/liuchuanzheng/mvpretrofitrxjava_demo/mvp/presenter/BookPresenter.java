@@ -17,7 +17,7 @@ import rx.schedulers.Schedulers;
  * Created by 刘传政 on 2018/5/28 0028.
  * QQ:1052374416
  * 电话:18501231486
- * 作用:
+ * 作用:具体的控制类。主要负责网络请求。最方便的写法是通过rxjava和retrofit处理网络请求。
  * 注意事项:
  */
 public class BookPresenter implements IPresenter {
