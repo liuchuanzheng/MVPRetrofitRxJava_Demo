@@ -1,4 +1,4 @@
-package com.liuchuanzheng.mvpretrofitrxjava_demo;
+package com.liuchuanzheng.mvpretrofitrxjava_demo.mvp.model;
 
 import java.util.List;
 

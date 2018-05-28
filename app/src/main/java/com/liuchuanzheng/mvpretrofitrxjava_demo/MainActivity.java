@@ -6,6 +6,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.liuchuanzheng.mvpretrofitrxjava_demo.mvp.model.Book;
+import com.liuchuanzheng.mvpretrofitrxjava_demo.mvp.presenter.BookPresenter;
+import com.liuchuanzheng.mvpretrofitrxjava_demo.mvp.view.IBookView;
+import com.liuchuanzheng.mvpretrofitrxjava_demo.retrofitservice.RetrofitService;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -44,9 +49,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 doWithRxjava();
                 break;
             case R.id.button3:
-                doYuansheng();
+                doWithMvp();
                 break;
         }
+    }
+
+    private void doWithMvp() {
+        IBookView bookView = new IBookView() {
+            @Override
+            public void onSuccess(Book mBook) {
+                textView.setText("");
+                textView.setText(mBook.toString());
+            }
+
+            @Override
+            public void onError(String result) {
+
+            }
+        };
+        BookPresenter bookPresenter = new BookPresenter(MainActivity.this);
+        bookPresenter.addView(bookView);
+        bookPresenter.getSearchBook("金瓶梅", null, 0, 1);
     }
 
     private void doWithRxjava() {

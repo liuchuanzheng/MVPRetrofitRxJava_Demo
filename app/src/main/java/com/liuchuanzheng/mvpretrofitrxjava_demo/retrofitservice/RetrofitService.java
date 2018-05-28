@@ -1,5 +1,7 @@
-package com.liuchuanzheng.mvpretrofitrxjava_demo;
+package com.liuchuanzheng.mvpretrofitrxjava_demo.retrofitservice;
 
+
+import com.liuchuanzheng.mvpretrofitrxjava_demo.mvp.model.Book;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
